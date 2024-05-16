@@ -7,5 +7,7 @@ def index(req):
 
 def user(req):
     user_list = User.objects.order_by('first_name')
-    user_dict = {'user':user_list}
-    return render(req, 'appThree/user.html',context=user_list)
+    user1 = {'user':"dummy"}
+    user_dict = {'users':user_list}
+    print(user_dict,"users")
+    return render(req, 'appThree/user.html',context=user_dict)
