@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path,include
 from appTwo import views
 from appThree import views
+from appFour import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index),
     path("appTwo/",include('appTwo.urls')),
     path("appThree/",include('appThree.urls')),
+    path("appFour/",include('appFour.urls')),
 ]
